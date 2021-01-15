@@ -2,11 +2,11 @@
     background: black;
     color: white;
     position: fixed;
-    left: 32%;
+    left: 25%;
     border: 2px solid rgb(55, 0, 255);
     border-radius: 20px;
     height: auto;
-    width: 500px;
+    width: 600px;
 }
 
 #textbox {
@@ -47,4 +47,8 @@
 
 .other {
     background-color: black;
+}
+
+#hidden {
+    visibility: hidden;
 }
