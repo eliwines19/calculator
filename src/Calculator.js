@@ -46,10 +46,14 @@ class Calculator extends React.Component {
     }
 
     onClickOperation = (e) => {
-        this.setState({
-            textbox: this.state.textbox.concat(e.target.value),
-            operation: [...this.state.operation, e.target.value]
-        })
+        if(this.state.operation.length >= 1){
+            this.onClickEquals();
+        } else {
+            this.setState({
+                textbox: this.state.textbox.concat(e.target.value),
+                operation: [...this.state.operation, e.target.value]
+            })
+        }
     }
 
     onClickEquals = (e) => {
@@ -60,6 +64,7 @@ class Calculator extends React.Component {
     }
 
     render(){
+        console.log(this.state.operation.length)
         return(
             <div id="calculator">
                 <div id="textbox">
